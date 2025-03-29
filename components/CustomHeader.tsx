@@ -5,23 +5,30 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { styles } from "@/styles/header.styles";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
 import SearchBar from "./SearchBar";
+import BottomSheetComponent from "./BottomSheet";
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
 
 const CustomHeader = () => {
+  const bottomSheetRef = useRef<BottomSheetModal>(null);
+  const openModal = () => {
+    bottomSheetRef.current?.present();
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
+      <BottomSheetComponent ref={bottomSheetRef} />
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={openModal}>
           <Image
             source={require("@/assets/images/bike.png")}
             style={styles.bike}
           />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.titleContainer}>
+        <TouchableOpacity style={styles.titleContainer} onPress={openModal}>
           <Text style={styles.title}>Delivery · Now</Text>
           <View style={styles.location}>
             <Text style={styles.subtitle}>Cairo</Text>
