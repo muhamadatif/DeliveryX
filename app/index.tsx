@@ -8,7 +8,11 @@ import Colors from "@/constants/Colors";
 const page = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
+      <ScrollView
+        contentContainerStyle={{
+          paddingVertical: 50,
+        }}
+      >
         <Categories />
         <Text style={styles.header}>Top picks in your neighbourhood</Text>
         <Resturants />
@@ -23,6 +27,7 @@ const styles = StyleSheet.create({
   container: {
     top: 50,
     backgroundColor: Colors.lightGrey,
+    flex: 1,
   },
   header: {
     fontSize: 18,
