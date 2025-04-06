@@ -1,11 +1,5 @@
 import React, { useRef, useState } from "react";
-import {
-  Animated,
-  Dimensions,
-  StyleSheet,
-  View,
-  ScrollView,
-} from "react-native";
+import { Animated, Dimensions, StyleSheet, View } from "react-native";
 import PropTypes from "prop-types";
 
 const window = Dimensions.get("window");
