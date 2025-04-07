@@ -37,6 +37,7 @@
     "react-native": "0.76.7",
     "react-native-bouncy-checkbox": "^4.1.2",
     "react-native-collapsible-header-views": "^1.1.2",
+    "react-native-confetti-cannon": "^1.5.2",
     "react-native-gesture-handler": "~2.20.2",
     "react-native-get-random-values": "^1.11.0",
     "react-native-google-places-autocomplete": "^2.5.7",
